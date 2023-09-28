@@ -6,6 +6,7 @@ body {
   background-color: rgb(231, 203, 165);
   font-family: "Indie Flower", cursive;
 }
+
 .card {
   width: 20%;
   height: 35%;
@@ -16,6 +17,7 @@ body {
   justify-content: space-around;
   border: 3px black;
   margin: 30px;
+  margin-top: 5%;
   border-radius: 15px;
   box-shadow: 10px 10px 10px rgb(103, 72, 51);
   transition: all 0.3s;
@@ -25,7 +27,11 @@ body {
   transform: scale(1.05);
   background-color: rgb(212, 171, 132);
   box-shadow: inset 0 0 0 3px #391a04;
-  transform: skew(-2deg);
+}
+  
+.card-img:hover {
+  transform: scale(1.05);
+  opacity: 80%;
 }
 
 .card-img {
@@ -35,6 +41,7 @@ body {
   height: 280px;
   object-fit: cover;
   border-radius: 13%;
+  transition: all 0.2s ease-in-out;
 }
 .card-title {
   font-size: 2.2rem;
@@ -67,4 +74,27 @@ h1 {
   border-width: 3px;
   width: fit-content;
   height: fit-content;
+}
+.animation {
+  height: 10rem;
+  width: 10rem;
+  position: absolute;
+  animation: animation 2s infinite;
+}
+@keyframes animation {
+  0% {
+    left: 5%;
+    top: 2%;
+    transform: rotate(0.035turn);
+  }
+  50% {
+    left: 25%;
+    top: 2%;
+    transform: rotate(-0.035turn);
+  }
+  100% {
+    left: 5%;
+    top: 2%;
+    transform: rotate(0.035turn);
+  }
 }
